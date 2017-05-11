@@ -1,0 +1,47 @@
+/* Screen dimensions for media query */
+
+$desktop-screen: 1024px;
+$tablet-screen: 950px;
+$mobile-screen: 420px;
+
+
+/* Global variables */
+
+$body-font-family: Arial;
+$body-font-size: 100%;
+$body-line-height: 150%;
+$body-background-color: #efefef;
+$body-color: #000;
+$body-margin: 0;
+$border-radius: 10px;
+
+/* Link variables */
+
+$link-color: #0C68D8;
+$link-weight: 600;
+
+/* Pannel component */
+
+$pannel-shadow: 0 2px 0 rgba(90, 89, 89, .8);
+$pannel-border-color: #c7c7c7;
+
+/* Colors variables */
+
+$color-default: #b2b2b2;
+$color-success: #64ce05;
+$color-alert: #f71010;
+$color-warning: #cebd05;
+$color-info: #0580ce;
+$color-primary: #05bdce;
+
+/* Button style */
+
+$button-border-radius: 15px;
+
+/* Navigation style */
+
+$navigation-background-color: #2d2e48;
+
+/* Table style */
+
+$table-border: 2px solid $color-default;

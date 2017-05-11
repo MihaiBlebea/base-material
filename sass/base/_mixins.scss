@@ -1,0 +1,70 @@
+@mixin header-font-size($font-size) {
+    font-size: $font-size + 20%;
+}
+
+@mixin transition($property, $speed, $effect) {
+    -webkit-transition: $property $speed $effect;
+    transition: $property $speed $effect;
+}
+
+@mixin hover-background($color, $text-color) {
+    background-color: rgba($color, .0);
+    @include transition(background-color, 500ms, ease-in);
+
+    &:hover:not(:target) {
+        background-color: $color;
+        color: $text-color;
+    }
+}
+
+@mixin hover-button-background($color) {
+    background-color: rgba($color, .7);
+    @include transition(background-color, 500ms, ease-in);
+
+    &:hover {
+        background-color: $color;
+        color: #fff;
+    }
+}
+
+/*
+@mixin hover-tab-header($color, $text-color) {
+    background-color: rgba($color, .4);
+    @include transition(background-color, 900ms, ease-in);
+
+    &:hover {
+        cursor: pointer;
+        bottom: 0px;
+        background-color: $color;
+        color: $text-color;
+    }
+} */
+
+@mixin color-opacity($color, $opacity: 0.5) {
+    $red: red($color);
+    $green: green($color);
+    $blue: blue($color);
+
+    background-color: rgba($red, $green, $blue, $opacity);
+}
+
+@mixin fade-effect($time: 1s) {
+    animation: fadeEffect $time;
+    @keyframes fadeEffect {
+        from { opacity: 0; }
+        to { opacity: 1; } 
+    }
+}
+
+@mixin fade-out-effect($time: 1s) {
+    animation: fadeEffect $time;
+    @keyframes fadeEffect {
+        from { opacity: 1; }
+        to { opacity: 0; } 
+    }
+}
+
+@mixin transition-width($time: 2s) {
+    -webkit-transition: width $time;
+    transition: width $time;
+}

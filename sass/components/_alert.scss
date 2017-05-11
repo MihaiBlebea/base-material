@@ -1,0 +1,17 @@
+.alert {
+    max-width: 100%;
+    padding: 20px;
+    box-shadow: $pannel-shadow;
+    color: #fff;
+    margin: 10px;
+    border-radius: $border-radius;
+    display: none;
+
+    @include fade-effect();
+
+    @extend %pannel-color-control;
+
+    &.is-active {
+        display: block;
+    }
+}

@@ -1,0 +1,160 @@
+%pannel-color-control {
+    &.is-primary {
+        background-color: $color-primary;
+    }
+
+    &.is-info {
+        background-color: $color-info;
+    }
+
+    &.is-alert {
+        background-color: $color-alert;
+    }
+
+    &.is-warning {
+        background-color: $color-warning;
+    }
+
+    &.is-success {
+        background-color: $color-success;
+    }
+
+    &.is-default {
+        background-color: $color-default;
+    }
+}
+
+%form-outline {
+    &.is-alert {
+        border: 2px solid $color-alert;
+        @include color-opacity($color-alert, 0.1);
+    }
+
+    &.is-warning {
+        border: 2px solid $color-warning;
+        @include color-opacity($color-warning, 0.1);
+    }
+
+    &.is-success {
+        border: 2px solid $color-success;
+        @include color-opacity($color-success, 0.1);
+    }
+
+    &.is-info {
+        border: 2px solid $color-info;
+        @include color-opacity($color-info, 0.1);
+    }
+}
+
+%box-border {
+    &.is-primary {
+        border-color: $color-primary;
+    }
+
+    &.is-info {
+        border-color: $color-info;
+    }
+
+    &.is-alert {
+        border-color: $color-alert;
+    }
+
+    &.is-warning {
+        border-color: $color-warning;
+    }
+
+    &.is-success {
+        border-color: $color-success;
+    }
+
+    &.is-default {
+        border-color: $color-default;
+    }
+}
+
+%box-background {
+    &.bg-primary {
+        background-color: $color-primary;
+        color: #fff;
+    }
+
+    &.bg-info {
+        background-color: $color-info;
+    }
+
+    &.bg-alert {
+        background-color: $color-alert;
+        color: #fff;
+    }
+
+    &.bg-warning {
+        background-color: $color-warning;
+    }
+
+    &.bg-success {
+        background-color: $color-success;
+    }
+
+    &.bg-default {
+        background-color: $color-default;
+    }
+
+    &.bg-white {
+        background-color: #fff;
+    }
+}
+
+%global-layouts {
+    &.centered {
+        margin:auto;
+        padding: 20px;
+    }
+
+    &.to-left {
+        align-self: flex-start;
+        -webkit-align-self: flex-start;
+    }
+
+    &.to-right {
+        align-self: flex-end;
+        -webkit-align-self: flex-end;
+    }
+
+    &.padding-10 {
+        padding: 10px;
+    }
+
+    &.padding-15 {
+        padding: 15px;
+    }
+
+    &.padding-25 {
+        padding: 25px;
+    }
+
+    &.padding-35 {
+        padding: 35px;
+    }
+}
+
+%layout-columns {
+    &.col-1 {
+        flex: 1;
+    }
+
+    &.col-2 {
+        flex: 2;
+    }
+
+    &.col-3 {
+        flex: 3;
+    }
+
+    &.col-4 {
+        flex: 4;
+    }
+
+    &.col-5 {
+        flex: 5;
+    }
+}

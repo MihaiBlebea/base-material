@@ -1,0 +1,36 @@
+.menu {
+    ul {
+        -webkit-padding-start: 0px;
+        border-left: $table-border
+    }
+
+    li {
+        display: grid;
+        padding-left: 10px;
+        padding-bottom: 5px;
+        padding-top: 5px;
+
+        &:hover:not(.is-active) {
+            cursor: pointer;
+            border-bottom-right-radius: 10px;
+            border-top-right-radius: 10px;
+
+            @include hover-background($color-primary, #fff);
+        }
+
+        &.is-active {
+            background-color: $color-default;
+            color: #fff;
+            border-bottom-right-radius: 10px;
+            border-top-right-radius: 10px;
+            
+            box-shadow: $pannel-shadow;
+        }
+    }
+
+    .chapter {
+        font-size: 1.2em;
+        font-weight: 600;
+        padding-left: 0px;
+    }
+}

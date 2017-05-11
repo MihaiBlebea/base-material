@@ -1,0 +1,16 @@
+body {
+    font-family: $body-font-family;
+    font-size: $body-font-size;
+    line-height: $body-line-height;
+    background-color: $body-background-color;
+    color: $body-color;
+    margin: $body-margin;
+    margin-top: 60px;
+    max-width: 100%;
+    overflow-x: hidden
+}
+
+a {
+    color: $link-color;
+    font-weight: $link-weight;
+}

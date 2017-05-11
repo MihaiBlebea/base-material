@@ -1,0 +1,30 @@
+.modal {
+    .modal-content {
+        display: none;
+    }
+    &.is-active {
+        .overlay{
+            background-color: #000;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: 2;
+            opacity: .7;
+        }
+
+        .modal-content {
+            top: 25%;
+            left: 25%;
+            z-index: 2;
+            max-width: 50%;
+            display: block;
+            margin: auto;
+            position: fixed;
+
+            @include fade-effect();
+        }
+    }
+}
+

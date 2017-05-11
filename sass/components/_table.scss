@@ -1,0 +1,43 @@
+.table {
+    border: $table-border;
+    box-shadow: $pannel-shadow;
+    overflow-x: auto;
+    background-color: #fff;
+
+    &.fixed {
+        table-layout: fixed;
+        td {
+            overflow: hidden;
+        }
+    }
+
+    &.is-centered {
+        th, td {
+            text-align: center;
+        }
+    }
+
+    &.hover {
+        tbody {
+            tr:hover {
+                background-color: $color-default;
+                color: #fff;
+            }
+        }
+    }
+
+    tr {
+        @extend %box-background;
+    }
+
+    th, td {
+        padding: 5px;
+    }
+
+    &.with-borders {
+        border-collapse: collapse;
+        td, th {
+            border: $table-border;
+        }
+    }
+}

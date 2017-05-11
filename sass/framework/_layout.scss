@@ -1,0 +1,22 @@
+.container {
+    width: 100%;
+    margin: auto;
+    display: flex;
+
+    &.flex-row {
+        flex-direction: row;
+    }
+
+    &.flex-column {
+        flex-direction: column;
+    }
+}
+
+.content {
+    padding: 10px;
+
+    @extend %layout-columns;
+
+    @extend %global-layouts;
+}
+

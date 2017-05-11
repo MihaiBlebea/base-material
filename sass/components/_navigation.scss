@@ -1,0 +1,148 @@
+
+.navigation {
+    position: fixed;
+    display: flex;
+    flex-direction: row;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 2;
+
+    background-color: $navigation-background-color;
+    color: #fff;
+
+    &.is-hidden {
+        opacity: 0.9;
+    }
+
+    /* Just nav items here */
+
+    .nav-items {
+        display: flex;
+        flex: 1;
+        height: 100%;
+
+        &.right {
+            justify-content: flex-end;
+        }
+
+        &.left {
+            justify-content: flex-start;
+        }
+
+        &.center {
+            justify-content: center;
+        }
+
+        /* Just nav item here */
+
+        .nav-item {
+            height: 100%;
+            text-decoration: none;
+            color: #fff;
+            padding: 10px;
+            outline: 0;
+
+            @include hover-background($color-primary, #e7e7e7);
+
+            &:target {
+                background-color: $navigation-background-color;
+                position: relative;
+                bottom: -10px;
+                border-bottom-left-radius: 10px;
+                border-bottom-right-radius: 10px;
+                box-shadow: $pannel-shadow;
+            }
+
+            &.is-active {
+                background-color: $navigation-background-color;
+                position: relative;
+                bottom: -10px;
+                border-bottom-left-radius: 10px;
+                border-bottom-right-radius: 10px;
+                box-shadow: $pannel-shadow;
+            }
+        }
+    } 
+
+    .nav-mobile-items {
+        display: none;
+        flex: 1;
+        height: 100%;
+
+        &.right {
+            justify-content: flex-end;
+        }
+
+        &.left {
+            justify-content: flex-start;
+        }
+
+        &.center {
+            justify-content: center;
+        }
+
+        .nav-mobile-item {
+            height: 100%;
+            text-decoration: none;
+            color: #fff;
+            padding: 10px;
+            outline: 0;
+            cursor: pointer;
+
+            @include hover-background($color-primary, #e7e7e7);
+        }
+    }
+
+    @media (max-width: $tablet-screen) {
+        .nav-items {
+            display: none;
+        }
+
+        .nav-mobile-items {
+            display: flex;
+        }
+
+        .nav-mobile-dropdown {
+            display: block;
+        }     
+    }
+}
+
+.nav-mobile-dropdown {
+    display: block;
+    position: absolute;
+    top: -150px;
+    width: 20%;
+    background-color: #fff;
+    color: #b2b2b2;
+
+    box-shadow: $pannel-shadow;
+
+    border: 2px solid $pannel-border-color;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px; 
+
+    & ul {
+        list-style: none;
+        padding-left: 0px;
+        margin: auto;
+
+        & a {
+           text-decoration: none; 
+           color: $color-default;
+        }
+
+        & li {
+            padding: 10px;
+            max-width: 100%;
+            cursor: pointer;
+
+            @include hover-background($color-primary, #fff);
+        }
+    }
+
+    &.is-active {
+        top: 40px;
+    }
+}

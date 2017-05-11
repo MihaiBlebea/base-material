@@ -1,0 +1,94 @@
+.form {
+    width: 100%;
+    @include transition-width();
+
+    @extend %global-layouts;
+    
+    .form-group {
+        border: 2px solid $color-default;
+        border-radius: 10px;
+        margin-bottom: 10px;
+
+        &.with-shadow {
+            box-shadow: $pannel-shadow;
+        }
+
+        h3 {
+            padding-left: 20px;
+        }
+    }
+
+    .form-control {
+        max-width: 100%;
+        padding: 10px;
+
+        &.grid {
+            display: grid;
+        }
+
+        input[type=radio] {
+            height: 20px;
+            width: 20px;
+            vertical-align: sub;
+
+            &:checked+label {
+                font-weight: 600;
+                color: $color-primary;       
+            }
+        }
+
+        input[type=text] {
+            max-width: 95%;
+            border: 2px solid $color-default;
+            padding: 8px;
+            border-radius: 5px;
+            outline-color: $color-primary;
+            box-shadow: $pannel-shadow;
+
+            &.is-growing:focus {
+                width: 100%;
+            }
+
+            @extend %form-outline;
+        }
+
+        input[type=checkbox] {
+            height: 20px;
+            width: 20px;
+
+            &:checked+label {
+                font-weight: 600;
+                color: $color-primary;       
+            }
+        }
+
+        label:not(.value) {
+            color: #303030;
+            font-weight: 600;
+        }
+
+        .input {
+            max-width: 100%;
+            padding: 8px;
+            border-radius: 5px;
+            outline-color: $color-primary;
+            box-shadow: $pannel-shadow;
+
+            @extend %form-outline;
+
+            &.fullwidth {
+                min-width: 98%;
+            }
+
+            &.fixed {
+                resize: none;
+            }
+        }
+
+        .has-error {
+            max-width: 100%;
+            margin-top: 3px;
+            color: $color-alert;
+        }
+    }
+}

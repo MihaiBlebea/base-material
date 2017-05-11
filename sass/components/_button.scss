@@ -1,0 +1,34 @@
+.button {
+
+    display: inline-block;
+    padding: 8px 14px;
+    text-decoration: none;
+    outline: 0;
+
+    @include hover-button-background($color-primary);
+    color: #fff;
+
+    &.is-round {
+        border-radius: $button-border-radius;
+    }
+
+    &.is-primary {
+        @include hover-button-background($color-primary);
+    }
+
+    &.is-info {
+        @include hover-button-background($color-info);
+    }
+
+    &.is-alert {
+        @include hover-button-background($color-alert);
+    }
+
+    &.is-warning {
+        @include hover-button-background($color-warning);
+    }
+
+    &.is-success {
+        @include hover-button-background($color-success);
+    }
+}
